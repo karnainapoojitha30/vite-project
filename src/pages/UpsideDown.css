@@ -1,0 +1,81 @@
+.ud-locked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 84px;
+}
+
+.ud-lock-icon {
+  font-size: 56px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 18px rgba(255, 77, 77, 0.45));
+}
+
+.ud-eyebrow {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #ff4d4d;
+  text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+.ud-locked h2 {
+  margin-top: 6px;
+}
+
+.ud-locked p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.ud-locked-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ud-locked-actions .st-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ud-secondary-link {
+  color: #b8b0a4;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ud-secondary-link:hover {
+  color: #ff8080;
+  border-color: rgba(255, 128, 128, 0.5);
+}
+
+.ud-creature-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ud-creature-card:hover {
+  border-color: var(--accent, rgba(255, 255, 255, 0.3));
+}
+
+.ud-creature-card h3 {
+  color: var(--accent, #fff);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--accent, #ff4d4d) 50%, transparent);
+}
+
+.ud-creature-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--accent, #ff4d4d);
+  letter-spacing: 0.4px;
+}

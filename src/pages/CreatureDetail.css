@@ -1,0 +1,114 @@
+.creature-detail {
+  --accent: #ff4d4d;
+}
+
+.creature-back {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.creature-hero {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.creature-art-image,
+.creature-art-placeholder {
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.creature-art-placeholder {
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.06), transparent 60%), #17110c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #9c9488;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.creature-art-placeholder svg {
+  width: 60%;
+  height: 60%;
+}
+
+.creature-heading h2 {
+  font-size: 2.6rem;
+  margin: 10px 0 14px;
+  color: #fff;
+  text-shadow: 0 0 18px var(--accent);
+}
+
+.creature-heading p {
+  color: #d8d8d8;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.creature-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 36px 0;
+}
+
+.creature-stat {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.creature-stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9c9488;
+}
+
+.creature-stat-value {
+  font-size: 1.05rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.creature-body {
+  display: grid;
+  gap: 18px;
+  max-width: 740px;
+}
+
+.creature-body p {
+  color: #d8d8d8;
+  line-height: 1.85;
+}
+
+@media (max-width: 720px) {
+  .creature-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .creature-art-image,
+  .creature-art-placeholder {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .creature-heading p {
+    max-width: 100%;
+  }
+}
