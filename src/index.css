@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root {
+	--font-body: 'DM Sans', sans-serif;
+	--font-display: 'Bebas Neue', sans-serif;
+	--font-accent: 'Libre Baskerville', serif;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body,
+button,
+input {
+	font-family: var(--font-body);
+}

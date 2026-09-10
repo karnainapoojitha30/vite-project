@@ -49,6 +49,7 @@ const CreatureDetail = () => {
         </div>
       </div>
 
+      <h3 className="creature-section-title">Entity Profile</h3>
       <div className="creature-stats">
         {creature.stats.map((stat) => (
           <div className="creature-stat" key={stat.label}>
@@ -58,6 +59,7 @@ const CreatureDetail = () => {
         ))}
       </div>
 
+      <h3 className="creature-section-title">Field Notes</h3><br></br>
       <div className="creature-body">
         {creature.details.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>

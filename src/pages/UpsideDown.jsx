@@ -38,10 +38,9 @@ const UpsideDown = () => {
           <Link
             key={creature.slug}
             to={`/creature/${creature.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
             className="page-card ud-creature-card"
             style={{ '--accent': creature.accent }}
+            aria-label={`Open file for ${creature.name}`}
           >
             <h3>{creature.name}</h3>
             <p>{creature.summary}</p>

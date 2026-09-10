@@ -42,13 +42,17 @@
 }
 
 .creature-heading h2 {
-  font-size: 2.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 1px;
   margin: 10px 0 14px;
   color: #fff;
   text-shadow: 0 0 18px var(--accent);
 }
 
 .creature-heading p {
+  font-family: var(--font-body);
   color: #d8d8d8;
   line-height: 1.7;
   max-width: 560px;
@@ -59,6 +63,14 @@
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 16px;
   margin: 36px 0;
+}
+
+.creature-section-title {
+  margin-bottom: -20px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .creature-stat {
@@ -110,5 +122,9 @@
 
   .creature-heading p {
     max-width: 100%;
+  }
+
+  .creature-section-title {
+    text-align: center;
   }
 }

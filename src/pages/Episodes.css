@@ -7,7 +7,7 @@
 }
 
 .ep-eyebrow {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-accent);
   font-size: 12px;
   letter-spacing: 4px;
   color: #ff4d4d;
@@ -28,7 +28,7 @@
 }
 
 .ep-dial-btn {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-body);
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 10px 20px;
@@ -95,15 +95,17 @@
 }
 
 .ep-tape-num {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-display);
   font-size: 20px;
   color: #ff4d4d;
   min-width: 30px;
 }
 
 .ep-tape-title {
+  min-width: 0;
   font-size: 14px;
   color: #f0f0f0;
+  line-height: 1.35;
 }
 
 .ep-tape-runtime {
@@ -122,7 +124,7 @@
 
 .ep-detail-label {
   display: inline-block;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-accent);
   font-size: 11px;
   letter-spacing: 2px;
   color: #ff4d4d;
@@ -144,7 +146,7 @@
 
 .ep-play-btn {
   margin-top: 20px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-body);
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 12px 22px;
@@ -169,5 +171,23 @@
 
   .ep-detail {
     padding: 20px;
+  }
+
+  .ep-tape {
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .ep-tape-num {
+    min-width: 24px;
+    font-size: 1rem;
+  }
+
+  .ep-tape-title {
+    font-size: 0.8rem;
+  }
+
+  .ep-tape-runtime {
+    font-size: 0.7rem;
   }
 }

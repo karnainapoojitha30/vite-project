@@ -2,7 +2,7 @@
   color-scheme: dark;
   color: #f2f2f2;
   background: #050505;
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -63,9 +63,11 @@ body::before {
 }
 
 .page-section h2 {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
   margin-bottom: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 0 0 18px rgba(179, 0, 0, 0.35);
@@ -73,6 +75,7 @@ body::before {
 
 .page-section p {
   max-width: 740px;
+  font-size: 1rem;
   line-height: 1.8;
   color: #d8d8d8;
 }
@@ -99,6 +102,8 @@ body::before {
 }
 
 .page-card h3 {
+  font-family: var(--font-accent);
+  font-size: 1.15rem;
   margin-bottom: 12px;
   color: white;
 }
@@ -112,6 +117,7 @@ body::before {
 
 .auth-form label {
   display: block;
+  font-family: var(--font-accent);
   font-size: 0.95rem;
   margin-bottom: 8px;
 }
@@ -123,6 +129,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.05);
   color: #f2f2f2;
+  font-size: 1rem;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
@@ -163,9 +170,6 @@ body::before {
     padding: 36px 20px 64px;
   }
 
-  .page-section h2 {
-    font-size: 2.5rem;
-  }
 }
 
 @media (max-width: 680px) {
@@ -178,9 +182,6 @@ body::before {
     padding: 32px 16px 60px;
   }
 
-  .page-section h2 {
-    font-size: 2.2rem;
-  }
 
   .page-grid {
     gap: 16px;
@@ -192,9 +193,6 @@ body::before {
     padding: 24px 14px 52px;
   }
 
-  .page-section h2 {
-    font-size: 1.95rem;
-  }
 
   .page-card {
     padding: 20px;

@@ -14,7 +14,7 @@
 }
 
 .ud-eyebrow {
-  font-family: 'Libre Baskerville', serif;
+  font-family: var(--font-accent);
   font-size: 12px;
   letter-spacing: 4px;
   color: #ff4d4d;
@@ -44,6 +44,7 @@
 }
 
 .ud-secondary-link {
+  font-family: var(--font-body);
   color: #b8b0a4;
   font-size: 0.9rem;
   text-decoration: none;
