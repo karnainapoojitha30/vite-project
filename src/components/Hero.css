@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   background-image: url('/images/will1.webp');
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
-  padding-top: 110px;
+  padding-top: 72px;
+  isolation: isolate;
 }
 
 .hero::before {
@@ -15,13 +18,15 @@
   background: radial-gradient(circle at 30% 20%, rgba(255, 77, 77, 0.18), transparent 22%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.74));
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 72px);
 }
 
 .fire-reveal {
@@ -32,6 +37,7 @@
   background-size: cover;
   background-position: center;
   pointer-events: none;
+  z-index: 1;
   opacity: 0;
   transition: opacity 0.55s ease;
   --tx: calc(var(--x) - 24px);
@@ -82,11 +88,11 @@
   position: absolute;
   bottom: 50px;
   left: 50px;
-  width: 360px;
+  width: min(360px, calc(100% - 40px));
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: clamp(22px, 3vw, 30px);
   background: rgba(0, 0, 0, 0.42);
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -94,7 +100,11 @@
 }
 
 .left h1 {
-  font-size: 58px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.4rem, 5.5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 2px;
   color: red;
   text-shadow:
     0 0 8px rgba(179, 0, 0, 0.6),
@@ -102,7 +112,8 @@
 }
 
 .left p {
-  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   max-width: 400px;
   color: #f1f1f1;
   line-height: 1.65;
@@ -110,7 +121,9 @@
 
 .left button,
 .st-btn {
-  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
   padding: 16px 30px;
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(255, 77, 77, 0.98), rgba(179, 0, 0, 0.9));
@@ -149,11 +162,11 @@
   position: absolute;
   bottom: 100px;
   right: 22px;
-  width: 420px;
+  width: min(420px, calc(100% - 40px));
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: clamp(22px, 3vw, 30px);
   background: rgba(0, 0, 0, 0.36);
   border-radius: 32px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -161,16 +174,21 @@
 }
 
 .right h1 {
-  font-size: 50px;
-  width: 430px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  width: auto;
   text-shadow:
     0 0 8px rgba(179, 0, 0, 0.6),
     0 0 18px rgba(179, 0, 0, 0.4);
 }
 
 .right p {
-  font-size: 20px;
-  width: 380px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(0.98rem, 1.3vw, 1.15rem);
+  width: auto;
   line-height: 1.6;
   color: #f1f1f1;
 }
@@ -182,11 +200,11 @@
 
   .left {
     left: 24px;
-    width: 300px;
+    width: min(320px, calc(100% - 48px));
   }
 
   .left h1 {
-    font-size: 60px;
+    font-size: clamp(3rem, 7vw, 4rem);
   }
 
   .left p {
@@ -195,34 +213,45 @@
 
   .right {
     right: 16px;
-    width: 340px;
+    width: min(360px, calc(100% - 32px));
     bottom: 90px;
   }
 
   .right h1 {
-    font-size: 50px;
-    width: 360px;
+    font-size: clamp(2.8rem, 6vw, 3.5rem);
+    width: auto;
   }
 
   .right p {
-    font-size: 20px;
-    width: 340px;
+    font-size: 1rem;
+    width: auto;
   }
 }
 
 @media (max-width: 720px) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 92px;
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    min-height: auto;
+    padding: 0 14px 28px;
+  }
+
   .left,
   .right {
     position: relative;
     bottom: auto;
     left: auto;
     right: auto;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     padding: 26px 22px;
     background: rgba(0, 0, 0, 0.42);
     border-radius: 26px;
-    margin: 0 auto 18px;
+    margin: 0 auto 16px;
   }
 
   .left {
@@ -230,7 +259,7 @@
   }
 
   .left h1 {
-    font-size: 52px;
+    font-size: clamp(3.1rem, 14vw, 4.4rem);
   }
 
   .left p,
@@ -240,7 +269,7 @@
   }
 
   .right h1 {
-    font-size: 38px;
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
     width: auto;
   }
 
@@ -257,11 +286,11 @@
   }
 
   .left h1 {
-    font-size: 42px;
+    font-size: 3.2rem;
   }
 
   .right h1 {
-    font-size: 30px;
+    font-size: 2.65rem;
   }
 
   .left p,
@@ -270,25 +299,3 @@
   }
 }
 
-@media (max-width: 520px) {
-  .hero {
-    padding-top: 90px;
-  }
-
-  .nav-logo {
-    font-size: 18px;
-  }
-
-  .left h1 {
-    font-size: 42px;
-  }
-
-  .right h1 {
-    font-size: 30px;
-  }
-
-  .left p,
-  .right p {
-    font-size: 16px;
-  }
-}

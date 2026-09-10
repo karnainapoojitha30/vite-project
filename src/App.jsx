@@ -9,12 +9,14 @@ import UpsideDown from './pages/UpsideDown'
 import CreatureDetail from './pages/CreatureDetail'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import BackButton from './components/BackButton'
 
 function App() {
   return (
     <Router>
       <Navbar />
       <main className="app-content">
+        <BackButton />
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/characters" element={<Characters />} />
