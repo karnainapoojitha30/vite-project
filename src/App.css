@@ -49,6 +49,8 @@ body::before {
 .app-content:has(.hero) {
   max-width: none;
   padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .page-section {
@@ -189,8 +191,13 @@ body::before {
 }
 
 @media (max-width: 520px) {
+  .app-content {
+    padding-top: 92px;
+  }
+
   .page-section {
     padding: 24px 14px 52px;
+    border-radius: 20px;
   }
 
 

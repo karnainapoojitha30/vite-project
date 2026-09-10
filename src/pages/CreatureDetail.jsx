@@ -59,7 +59,7 @@ const CreatureDetail = () => {
         ))}
       </div>
 
-      <h3 className="creature-section-title">Field Notes</h3><br></br>
+      <h3 className="creature-section-title">Field Notes</h3>
       <div className="creature-body">
         {creature.details.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
