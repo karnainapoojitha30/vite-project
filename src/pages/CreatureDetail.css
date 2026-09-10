@@ -66,11 +66,15 @@
 }
 
 .creature-section-title {
-  margin-bottom: -20px;
+  display: block;
+  margin: 32px 0 16px;
   color: var(--accent);
   font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .creature-stat {
